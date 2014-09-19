@@ -12,7 +12,7 @@ class PasswordFieldTestCase(SimpleTestCase):
     def test_password_field_is_settable_on_model(self):
         expected = self.faker.password()
 
-        with mock.patch('tests.unit.support.models.fields.make_password') as mocked_make_password:
+        with mock.patch('tests.support.models.fields.make_password') as mocked_make_password:
             from tests.support.models import Foo
 
             foo = Foo(password=expected)
@@ -22,7 +22,7 @@ class PasswordFieldTestCase(SimpleTestCase):
     def test_password_is_compareable(self):
         expected = self.faker.password()
 
-        with mock.patch('tests.unit.support.models.fields.check_password') as mocked_check_password:
+        with mock.patch('tests.support.models.fields.check_password') as mocked_check_password:
             from tests.support.models import Foo
 
             foo = Foo()

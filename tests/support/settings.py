@@ -17,7 +17,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'tests.unit.support'
+    'tests.support'
 )
 
 PASSWORD_HASHERS = ('django_plainpasswordhasher.PlainPasswordHasher', )
