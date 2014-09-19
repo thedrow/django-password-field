@@ -13,7 +13,6 @@ else:
         except ValueError as e:
             raise ValidationError(e.message)
 
-
     def cracklib_very_fascist_check_password_validator(password):
         try:
             VeryFascistCheck(password)
