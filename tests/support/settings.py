@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
+import django
+
 USE_TZ = True
 
 SECRET_KEY = 'secretkey'
@@ -19,3 +21,6 @@ INSTALLED_APPS = (
 )
 
 PASSWORD_HASHERS = ('django_plainpasswordhasher.PlainPasswordHasher', )
+
+if django.VERSION[:2] < (1, 6):
+  TEST_RUNNER = 'discover_runner.DiscoverRunner'
