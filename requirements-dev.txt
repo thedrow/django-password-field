@@ -3,4 +3,4 @@ cracklib
 mock
 fake-factory
 git+https://github.com/thedrow/django-plainpasswordhasher.git@patch-1
-zxcvbn
+git+https://github.com/thedrow/python-zxcvbn.git@patch-1
