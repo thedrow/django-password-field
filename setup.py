@@ -11,6 +11,6 @@ setup(
     license='BSD3',
     author='Omer Katz',
     author_email='omer.drow@gmail.com',
-    install_require=['Django'],
+    install_requires=['Django'],
     description=''
 )
