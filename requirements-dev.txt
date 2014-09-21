@@ -2,4 +2,5 @@
 cracklib
 mock
 fake-factory
-django-plainpasswordhasher
+git+https://github.com/thedrow/django-plainpasswordhasher.git@patch-1
+zxcvbn
