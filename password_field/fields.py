@@ -37,8 +37,8 @@ class PasswordField(CharField):
 
         super(PasswordField, self).__init__(max_length=max_length, *args, **kwargs)
 
-    def contribute_to_class(self, cls, name, virtual_only=False):
-        super(PasswordField, self).contribute_to_class(cls, name, virtual_only=virtual_only)
+    def contribute_to_class(self, cls, name, **kwargs):
+        super(PasswordField, self).contribute_to_class(cls, name, **kwargs)
 
         setattr(cls, name, PasswordFieldDescriptor(validators=self.validators))
         self.validators = []
