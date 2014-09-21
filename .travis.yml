@@ -14,7 +14,7 @@ env:
   - DJANGO="DJANGO>=1.7.0,<1.8.0"
 install:
   - travis_retry sudo apt-get install libcrack2-dev
-  - travis_retry pip install $DJANGO cracklib fake-factory django-plainpasswordhasher
+  - travis_retry pip install $DJANGO cracklib fake-factory git+https://github.com/thedrow/django-plainpasswordhasher.git@patch-1
   - if [[ $TRAVIS_PYTHON_VERSION == 2* || $TRAVIS_PYTHON_VERSION == 3.2 || $TRAVIS_PYTHON_VERSION == pypy* ]]; then travis_retry pip install mock; fi
   - if [[ $DJANGO == "DJANGO>=1.4.0,<1.5.0" || $DJANGO == "DJANGO>=1.5.0,<1.6.0" ]]; then travis_retry pip install django-discover-runner; fi
 script:
